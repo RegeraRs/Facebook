@@ -6,7 +6,7 @@ function registration(firstName, lastName, emailAdrees, password) {
   if (!firstName || !lastName || !emailAdrees || !password) {
     alert('Forms are not Filled');
     return;
-  }
+  };
   if (!regexp.test(emailAdrees)) {
     alert('Incorect Email!');
     return;
@@ -20,12 +20,12 @@ function registration(firstName, lastName, emailAdrees, password) {
   console.log(mainInform);
   class Person {
     constructor(mainInform, userData, gender) {
-      this.userinformation = mainInform;
+      this.userInformation = mainInform;
       this.userData = userData;
       this.gender = gender;
       this.name = mainInform[0];
     }
-  }
+  };
   newPerson = new Person(mainInform, userData, gender);
   newPerson = new Proxy(newPerson, {
     deleteProperty(target, prop) {
@@ -55,18 +55,18 @@ function logIn(email, password) {
   if (!email || !password) {
     alert('Forms are not Filled');
     return;
-  }
+  };
   if (!regexp.test(email)) {
-    alert('Incorect Email!');
+    alert('Incorrect Email!');
     return;
   };
   if (!newPerson) {
     alert('you must create new account before log in');
     return;
-  }
-  if (email === newPerson.userinformation[2] && password === newPerson.userinformation[3]) {
+  };
+  if (email === newPerson.userInformation[2] && password === newPerson.userInformation[3]) {
     alert('Welcome');
   } else {
     alert('Login or Password is incorrect');
-  }
+  };
 };
